@@ -79,4 +79,4 @@ theme: even
 deploy:
   type: git
   repository: https://github.com/WangPeng2017/Blog.git
-  branch: master
+  branch: gh-pages
