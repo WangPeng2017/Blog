@@ -57,6 +57,12 @@ default_category: uncategorized
 category_map:
 tag_map:
 
+# 配置 menu 菜单
+menu:
+  首页: /
+  文章列表: /archives
+  关于: /about
+
 # Date / Time format
 ## Hexo uses Moment.js to parse and display date
 ## You can customize the date format as defined in
