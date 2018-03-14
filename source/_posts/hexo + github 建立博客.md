@@ -19,41 +19,39 @@ ps: Hexo是一个基于Node.js的快速简单的静态博客框架，利用它�
 
 ```
 安装Hexo
-	npm install hexo -g
+npm install hexo -g
 
 初始化博客
-	hexo init blog
+hexo init blog
 
 blog源代码部署到GitHub
-	1、新建 github 仓库
-	2、blog 项目根目录 _congig.yml 文件 设置代码托管仓库,下面是我的。
+1、新建 github 仓库
+2、blog 项目根目录 _congig.yml 文件 设置代码托管仓库,下面是我的。
 
-	# Deployment
-	## Docs: https://hexo.io/docs/deployment.html
-	deploy:
-	  type: git
-	  repository: https://github.com/WangPeng2017/Blog.git
-	  branch: gh-pages
+# Deployment
+## Docs: https://hexo.io/docs/deployment.html
+deploy:
+  type: git
+  repository: https://github.com/WangPeng2017/Blog.git
+  branch: gh-pages
 
-	3、git push ---> 源代码托管在master
+3、git push ---> 源代码托管在master
 
-	GitHub 管理博客的逻辑是，master分支托管源代码，gh-pages分支托管hexo g 生成的博客代码。每次新写博客，首先push到master分支，然后 hexo g 、hexo d --- 生成、部署博客
+GitHub 管理博客的逻辑是，master 分支托管源代码，gh-pages 分支托管 hexo g 生成的博客代码。
+每次新写博客，首先push到master分支，然后 hexo g 、hexo d --- 生成、部署博客
 
 生成博客
-	hexo generate （hexo g）
+hexo generate （hexo g）
 
 本地部署
-	hexo server (hexo s)
+hexo server (hexo s)
 
 博客文件部署到GitHub --> gh-pages
-
-	hexo d
+hexo d
 
 ```
 
-### 添加新主题
-
-[官方主题](https://hexo.io/themes/)
+### 三、添加新主题 [官方主题](https://hexo.io/themes/)
 
 首先切换到博客根目录下，使用如下命令安装landscap-plus:
 ```
