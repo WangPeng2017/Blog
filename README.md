@@ -1,9 +1,3 @@
----
-title: hexo + github 建立个人博客
-date: 2018-03-13 23:30:56
-tags: hexo github
----
-
 ### 一、为什么建立博客
 
 我自己不擅长表达，写作能力也一般。一直有心锻炼自己，但是众所周知的懒癌，让这个计划搁置了n年之久，
@@ -61,7 +55,7 @@ git clone https://github.com/xiangming/landscape-plus.git themes/landscape-plus
 
 * 然后修改根目录下的配置文件_config.yml, 把theme选项的值设置为：landscape-plus。
 
-* 配置主题目录下的配置文件_config.yml，把menu菜单项中的各选项配置为自己喜欢的样式，比如把英文的菜单改为中文的
+* 配置 <b>主题目录(themes/even)<b>下的配置文件_config.yml，把menu菜单项中的各选项配置为自己喜欢的样式，比如把英文的菜单改为中文的
 
 ```
 menu:
