@@ -100,7 +100,7 @@
         <li class="mobile-menu-item">
           
           
-            Home
+            首页
           
         </li>
       </a>
@@ -109,7 +109,7 @@
         <li class="mobile-menu-item">
           
           
-            Archives
+            归档
           
         </li>
       </a>
@@ -130,7 +130,7 @@
           <a class="menu-item-link" href="/Blog/">
             
             
-              Home
+              首页
             
           </a>
         </li>
@@ -139,7 +139,7 @@
           <a class="menu-item-link" href="/Blog/archives/">
             
             
-              Archives
+              归档
             
           </a>
         </li>
@@ -175,18 +175,30 @@
     
     
   <div class="post-toc" id="post-toc">
-    <h2 class="post-toc-title">Contents</h2>
+    <h2 class="post-toc-title">文章目录</h2>
     <div class="post-toc-content">
-      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、为什么建立博客"><span class="toc-text">1、为什么建立博客</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、hexo-github-新建个人博客步骤"><span class="toc-text">2、hexo + github 新建个人博客步骤</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、为什么建立博客"><span class="toc-text">一、为什么建立博客</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二、hexo-github-新建个人博客步骤"><span class="toc-text">二、hexo + github 新建个人博客步骤</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#添加新主题"><span class="toc-text">添加新主题</span></a></li></ol>
     </div>
   </div>
 
 
     <div class="post-content">
       
-        <h3 id="1、为什么建立博客"><a href="#1、为什么建立博客" class="headerlink" title="1、为什么建立博客"></a>1、为什么建立博客</h3><p>我自己不擅长表达，写作能力也一般。一直有心锻炼自己，但是众所周知的懒癌，让这个计划搁置了n年之久，<br>刚好，最近工作业务上，不是特别忙，于是乎，列出了一个任务清单。建立本博客是第一个任务。任务第一步完成，<br>在此记录。。。</p>
+        <h3 id="一、为什么建立博客"><a href="#一、为什么建立博客" class="headerlink" title="一、为什么建立博客"></a>一、为什么建立博客</h3><p>我自己不擅长表达，写作能力也一般。一直有心锻炼自己，但是众所周知的懒癌，让这个计划搁置了n年之久，<br>刚好，最近工作业务上，不是特别忙，于是乎，列出了一个任务清单。建立本博客是第一个任务。</p>
+<p>任务第一步完成，在此记录。。。</p>
 <a id="more"></a>
-<h3 id="2、hexo-github-新建个人博客步骤"><a href="#2、hexo-github-新建个人博客步骤" class="headerlink" title="2、hexo + github 新建个人博客步骤"></a>2、hexo + github 新建个人博客步骤</h3>
+<h3 id="二、hexo-github-新建个人博客步骤"><a href="#二、hexo-github-新建个人博客步骤" class="headerlink" title="二、hexo + github 新建个人博客步骤"></a>二、hexo + github 新建个人博客步骤</h3><p>ps: Hexo是一个基于Node.js的快速简单的静态博客框架，利用它通过简单的几个命令就可以搭建一个个人博客。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">安装Hexo</span><br><span class="line">	npm install hexo -g</span><br><span class="line"></span><br><span class="line">初始化博客</span><br><span class="line">	hexo init blog</span><br><span class="line"></span><br><span class="line">blog源代码部署到GitHub</span><br><span class="line">	1、新建 github 仓库</span><br><span class="line">	2、blog 项目根目录 _congig.yml 文件 设置代码托管仓库,下面是我的。</span><br><span class="line"></span><br><span class="line">	# Deployment</span><br><span class="line">	## Docs: https://hexo.io/docs/deployment.html</span><br><span class="line">	deploy:</span><br><span class="line">	  type: git</span><br><span class="line">	  repository: https://github.com/WangPeng2017/Blog.git</span><br><span class="line">	  branch: gh-pages</span><br><span class="line"></span><br><span class="line">	3、git push ---&gt; 源代码托管在master</span><br><span class="line"></span><br><span class="line">	GitHub 管理博客的逻辑是，master分支托管源代码，gh-pages分支托管hexo g 生成的博客代码。每次新写博客，首先push到master分支，然后 hexo g 、hexo d --- 生成、部署博客</span><br><span class="line"></span><br><span class="line">生成博客</span><br><span class="line">	hexo generate （hexo g）</span><br><span class="line"></span><br><span class="line">本地部署</span><br><span class="line">	hexo server (hexo s)</span><br><span class="line"></span><br><span class="line">博客文件部署到GitHub --&gt; gh-pages</span><br><span class="line"></span><br><span class="line">	hexo d</span><br></pre></td></tr></table></figure>
+<h3 id="添加新主题"><a href="#添加新主题" class="headerlink" title="添加新主题"></a>添加新主题</h3><p><a href="https://hexo.io/themes/" target="_blank" rel="noopener">官方主题</a></p>
+<p>首先切换到博客根目录下，使用如下命令安装landscap-plus:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/xiangming/landscape-plus.git themes/landscape-plus</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li><p>然后修改根目录下的配置文件_config.yml, 把theme选项的值设置为：landscape-plus。</p>
+</li>
+<li><p>配置主题目录下的配置文件_config.yml，把menu菜单项中的各选项配置为自己喜欢的样式，比如把英文的菜单改为中文的</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">  首页: /</span><br><span class="line">  文章列表: /archives</span><br><span class="line">  关于: /about</span><br></pre></td></tr></table></figure>
+
       
     </div>
 
@@ -196,15 +208,15 @@
 
   <div class="post-copyright">
     <p class="copyright-item">
-      <span>Author: </span>
+      <span>原文作者: </span>
       <a href="https://wangpeng2017.github.io/Blog">王鹏</a>
     </p>
     <p class="copyright-item">
-      <span>Link: </span>
+      <span>原文链接: </span>
       <a href="https://wangpeng2017.github.io/Blog/2018/03/13/hexo + github 建立博客/">https://wangpeng2017.github.io/Blog/2018/03/13/hexo + github 建立博客/</a>
     </p>
     <p class="copyright-item">
-      <span>License: </span>
+      <span>许可协议: </span>
       
       <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>
     </p>
@@ -292,11 +304,11 @@
 
 <div class="copyright">
   <span class="power-by">
-    Powered by <a class="hexo-link" href="https://hexo.io/">Hexo</a>
+    由 <a class="hexo-link" href="https://hexo.io/">Hexo</a> 强力驱动
   </span>
   <span class="division">|</span>
   <span class="theme-info">
-    Theme - 
+    主题 - 
     <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
   </span>
 
