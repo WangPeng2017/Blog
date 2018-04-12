@@ -215,39 +215,15 @@
       
         
         
+          
+        
 
         
           <p>#编写良好的前端组件</p>
 <p>Vue 和 React 的大红大火，带来的是新的开发方式 — 组件化和数据驱动<br>随着webpack等构建工具的完善，前端代码具备了后端编程语言的代码组织能力，故，作为前端也该对自己的代码有更高的要求。</p>
-<p>#组件职责划分</p>
-<p>一个组件只做一件事，基于功能做好职责划分。</p>
-<p>#组件的分类</p>
-<p>无状态组件、端对端组件、UI组件、业务组件、容器组件</p>
-<p>#组件设计原则</p>
-<p>##尽可能的减少状态</p>
-<ol>
-<li>如果一个数据可以由另一个 state 变换得到，那么这个数据就不是一个 state。只需要写一个变换的处理函数，在 Vue 中可以使用计算属性。</li>
-<li>不要重复自己。如果你的 state 是一个数组，而模版最外层是渲染这个数组，那么你需要做的事是把渲染的项作为一个组件，只接受一个单级对象形式的数据，由外部决定这个组件的展示次数。</li>
-<li>如果一个数据是固定的，不会变化的常量，那么这个数据就如同 HTML 固定的站点标题一样，写死或作为全局配置属性等，不属于 state。</li>
-<li>如果一个数据需要从外部得到，它应该属于 props。</li>
-<li>如果组件和兄弟组件拥有相同的 state，那么这个 state 应该放到更高的层级中，使用 props 传递到两个组件中。</li>
-</ol>
-<p>##合理的依赖关系</p>
-<ol>
-<li>父组件不依赖子组件。要做到当我们把子组件删除后，只是丢失了一个功能，或一个模块等，而不会造成父组件及兄弟组件功能异常。</li>
-<li>子组件基于父组件传递 props 作出个性化展示。</li>
-</ol>
-<p>##扁平化参数</p>
-<p>像 HTML 原生元素那样，只接受原始类型（字符串、数值、布尔值和函数）作为属性，避免复杂的对象。当然，数据除外。</p>
-<p>##良好的接口设计</p>
-<ol>
-<li>把组件内部可以完成的工作做到极致。虽然提倡拥抱变化，但接口不是越多越好。</li>
-<li>如果常量变为 props 能应对更多的场景，那么就可以作为 props。原有的常量可作为默认值。</li>
-<li>如果组件不能提供调用者所需求的功能，那么这个组件的接口还不够完善。</li>
-<li>如果需要为了某一调用者编写大量特定需求的代码，那么可以考虑通过扩展等方式构建一个新的组件。</li>
-<li>保证组件的属性和事件足够的给大多数的组件使用。</li>
-</ol>
-
+          <div class="read-more">
+            <a href="/Blog/2018/04/11/编写良好的前端组件/" class="read-more-link">阅读更多</a>
+          </div>
         
       
     </div>
@@ -284,186 +260,15 @@
       
         
         
+          
+        
 
         
           <p>ps: 因为公司业务需求，最近学习了一段时间Vue+node，关于哪个前端框架更好，仁者见智，<br>这里列一下前端各框架性能对比 <a href="https://cn.vuejs.org/v2/guide/comparison.html" target="_blank" rel="noopener">Vue vs React / Vue vs AngularJs</a></p>
 <h3 id="关于vue全家桶-vue-cli-vue-router-vuex-axios"><a href="#关于vue全家桶-vue-cli-vue-router-vuex-axios" class="headerlink" title="关于vue全家桶 vue-cli  + vue-router  +  vuex + axios"></a>关于vue全家桶 vue-cli  + vue-router  +  vuex + axios</h3><p>一、 脚手架新建项目 <a href="https://cn.vuejs.org/v2/guide/installation.html" target="_blank" rel="noopener">vue-cli</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># 全局安装 vue-cli</span><br><span class="line">$ npm install --global vue-cli</span><br><span class="line"># 创建一个基于 webpack 模板的新项目</span><br><span class="line">$ vue init webpack my-project</span><br><span class="line"># 安装依赖，走你</span><br><span class="line">$ cd my-project</span><br><span class="line">$ npm run dev</span><br></pre></td></tr></table></figure></p>
-<p><img src="https://upload-images.jianshu.io/upload_images/5903867-7a26c2cf4afc74a6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="项目目录"></p>
-<h4 id="二、-Vue的路由-vue-router"><a href="#二、-Vue的路由-vue-router" class="headerlink" title="二、 Vue的路由  vue-router "></a>二、 Vue的路由  <a href="https://router.vuejs.org/zh-cn/" target="_blank" rel="noopener">vue-router </a></h4><p>vue-router在全家桶里面定位是什么呢? 前端路由、创建单页应用！<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 摘自vue-router官方解释</span><br><span class="line">用 Vue.js + vue-router 创建单页应用，是非常简单的。</span><br><span class="line">使用 Vue.js ，我们已经可以通过组合组件来组成应用程序，</span><br><span class="line">当你要把 vue-router 添加进来，我们需要做的是，</span><br><span class="line">将组件(components)映射到路由(routes)，然后告诉 vue-router 在哪里渲染它们</span><br></pre></td></tr></table></figure></p>
-<p>vue的核心概念是组件(components)，vue-router将组件(components)映射到路由(routes)，然后告诉 vue-router 在哪里渲染它们！</p>
-<h5 id="关于路由的使用"><a href="#关于路由的使用" class="headerlink" title="关于路由的使用"></a>关于路由的使用</h5><p>1、在App.vue中新建视图 — 渲染到哪<br><img src="https://upload-images.jianshu.io/upload_images/5903867-e4fc8d058ac3819a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="App.vue"></p>
-<p>2、 路由页面（router/module/index）编写路由 — 渲染什么模块<br><img src="https://upload-images.jianshu.io/upload_images/5903867-1816f411311f596a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
-<p>module1、module2分文件夹，是解决大型项目路由复杂的问题。业务复杂度不高的可以直接把index.js文件拿出来</p>
-<p>如果出现使用 ()=&gt;import(@/component/index),加载组件报错的问题，可能是其他方式构建的项目，没有使用babel,或者缺少babel插件syntax-dynamic-import，解决办法参考： <a href="http://www.cnblogs.com/xiaochongchong/p/7772773.html" target="_blank" rel="noopener">vue-router按需加载</a></p>
-<p>3、 路由配置好之后，路由怎么跳转<br>路由按照上面的写法就配置好了各个路由，那么在页面之间需要路由跳转怎么做呢？<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a. 标签导航 &lt;router-link to=&quot;/foo&quot;&gt;Go to Foo&lt;/router-link&gt;</span><br><span class="line">b. 编程式导航  $router.push()、$router.replace()</span><br></pre></td></tr></table></figure></p>
-<p>查看详细：<a href="https://router.vuejs.org/zh-cn/essentials/getting-started.html" target="_blank" rel="noopener">vue-router</a></p>
-<h4 id="三、axios-vue-resource已经不再维护，vue2-0官方推荐使用axios"><a href="#三、axios-vue-resource已经不再维护，vue2-0官方推荐使用axios" class="headerlink" title="三、axios(vue-resource已经不再维护，vue2.0官方推荐使用axios)"></a>三、<a href="https://github.com/axios/axios" target="_blank" rel="noopener">axios</a>(vue-resource已经不再维护，vue2.0官方推荐使用axios)</h4><p>Axios 是一个基于 promise 的 HTTP 库，可以用在浏览器和 node.js 中。</p>
-<ul>
-<li>从浏览器中创建 <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest" target="_blank" rel="noopener">XMLHttpRequests</a></li>
-<li>从 node.js 创建 <a href="http://nodejs.org/api/http.html" target="_blank" rel="noopener">http</a> 请求</li>
-<li>支持 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" target="_blank" rel="noopener">Promise</a> API</li>
-<li>拦截请求和响应</li>
-<li>转换请求数据和响应数据</li>
-<li>取消请求</li>
-<li>自动转换 JSON 数据</li>
-<li>客户端支持防御 <a href="http://en.wikipedia.org/wiki/Cross-site_request_forgery" target="_blank" rel="noopener">XSRF</a></li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">//get</span><br><span class="line">axios.get(&apos;/user&apos;, &#123;</span><br><span class="line">    params: &#123;</span><br><span class="line">      ID: 12345</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">  .then(function (response) &#123;</span><br><span class="line">    console.log(response);</span><br><span class="line">  &#125;)</span><br><span class="line">  .catch(function (error) &#123;</span><br><span class="line">    console.log(error);</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">axios.post(&apos;/user&apos;, &#123;</span><br><span class="line">    firstName: &apos;Fred&apos;,</span><br><span class="line">    lastName: &apos;Flintstone&apos;</span><br><span class="line">  &#125;)</span><br><span class="line">  .then(function (response) &#123;</span><br><span class="line">    console.log(response);</span><br><span class="line">  &#125;)</span><br><span class="line">  .catch(function (error) &#123;</span><br><span class="line">    console.log(error);</span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure>
-<p>文档地址： <a href="https://github.com/axios/axios" target="_blank" rel="noopener">github</a> 、<a href="https://www.kancloud.cn/yunye/axios/234845" target="_blank" rel="noopener">中文翻译</a></p>
-<p>项目整合Axios的方法<br>1、全局注册axios，适用于请求较少的项目<br>在main.js中加入如下代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">import axios from &apos;axios&apos;</span><br><span class="line">Vue.prototype.$http = axios</span><br></pre></td></tr></table></figure></p>
-<p><img src="https://upload-images.jianshu.io/upload_images/5903867-95e30c165681a3ef.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="全局注册"></p>
-<p>2、封装<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">//新建一个JS命名为api</span><br><span class="line">import axios from &apos;axios&apos; </span><br><span class="line">//在api中导入axios</span><br><span class="line">let base = &apos;/v1&apos;</span><br><span class="line"></span><br><span class="line">//把整个项目的网络请求都写在这个文件中用export导出</span><br><span class="line"></span><br><span class="line">export const getproduct = params =&gt; &#123; return axios.get(`$&#123;base&#125;/product/info/$&#123;params&#125;`) &#125;</span><br><span class="line"></span><br><span class="line">//这样写方便管理整个项目的网络请求</span><br></pre></td></tr></table></figure></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">//在我们要是用这个请求时比如说getproduct</span><br><span class="line"></span><br><span class="line">import &#123;</span><br><span class="line">    getproduct</span><br><span class="line">  &#125;from &apos;../api/api&apos;;</span><br><span class="line">export default &#123;</span><br><span class="line">  name: &apos;HelloWorld&apos;,</span><br><span class="line">  data () &#123;</span><br><span class="line">    return &#123;</span><br><span class="line">      params:&#123;&#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    getProductList()&#123;</span><br><span class="line">      getproduct(this.params).then(result=&gt;&#123;</span><br><span class="line">        console.log(result);</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">//注意我们导出的时候用的是export 所以导入的时候必须带&#123;&#125;</span><br></pre></td></tr></table></figure>
-<p>扩展：<a href="https://segmentfault.com/a/1190000008383094" target="_blank" rel="noopener">利用Aixos实现前端实现登录拦截</a></p>
-<h5 id="跨域请求"><a href="#跨域请求" class="headerlink" title="跨域请求"></a>跨域请求</h5><p>跨域请求是web开发必须解决的一个问题。搞不定没有数据，就只能GAMEOVER了。 看这里不焦急~</p>
-<p>不同域名之间的访问，需要跨域才能正确请求。跨域的方法很多，通常都需要后台配置<br>不过 Vue-cli 创建的项目，可以直接利用 Node.js 代理服务器，实现跨域请求【正向代理】</p>
-<p>1、在 config&gt;index.js 的 dev 中添加配置项 proxyTable：</p>
-<ul>
-<li>‘/api’ 为匹配项</li>
-<li>target 为被请求的地址</li>
-</ul>
-<p><img src="https://upload-images.jianshu.io/upload_images/5903867-dd49260f46ecf48f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="配置代理"></p>
-<p>参考:<br><a href="http://www.cnblogs.com/wisewrong/p/6609594.html" target="_blank" rel="noopener">Vue-cli 创建的项目如何跨域请求</a><br><a href="https://segmentfault.com/a/1190000010719058" target="_blank" rel="noopener">前端开发如何独立解决跨域问题</a> — 这篇文章是标题党</p>
-<h4 id="Vue-知识点总结"><a href="#Vue-知识点总结" class="headerlink" title="Vue 知识点总结"></a>Vue 知识点总结</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vue 的核心思想是，数据驱动和组件化。</span><br></pre></td></tr></table></figure>
-<p>1、MVVM数据驱动，有别于传统jq+bootstrap的技术栈，代码组织的时候，需要摒弃操作dom的想法，一切皆数据！一切交互的操作，都是对数据的修改~<br><img src="https://upload-images.jianshu.io/upload_images/5903867-b117fe93f9f5eac9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="数据驱动"></p>
-<p>2、组件化，其实就是把页面进行分块处理，分成多个小块，每个小块就是一个组件，这样可以形成组件的复用，而且提高开发效率。<br>把应用根据功能拆分为一个个颗粒度合理的组件，需要一些项目锻炼。<br>扩展： <a href="https://imys.net/20170317/write-good-front-end-component.html" target="_blank" rel="noopener">编写良好的前端组件</a><br><img src="https://upload-images.jianshu.io/upload_images/5903867-7287367a0d8f9202.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="组件树"></p>
-<p>3、指令<br>文本 
-{{ }} 、
- v-html、v-show、v-if、v-else、v-if-else、v-once、v-bind、v-for、v-on、</p>
-<h4 id="区别点"><a href="#区别点" class="headerlink" title="区别点"></a>区别点</h4><p>a. v-if vs v-show<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">v-if 是“真正”的条件渲染，因为它会确保在切换过程中条件块内的事件监听器和子组件适当地被销毁和重建。</span><br><span class="line"></span><br><span class="line">v-if 也是惰性的：如果在初始渲染时条件为假，则什么也不做——直到条件第一次变为真时，才会开始渲染条件块。</span><br><span class="line"></span><br><span class="line">相比之下，v-show 就简单得多——不管初始条件是什么，元素总是会被渲染，并且只是简单地基于 CSS 进行切换。</span><br><span class="line"></span><br><span class="line">一般来说，v-if 有更高的切换开销，而 v-show 有更高的初始渲染开销。因此，如果需要非常频繁地切换，则使用 v-show 较好；如果在运行时条件很少改变，则使用 v-if 较好。</span><br></pre></td></tr></table></figure></p>
-<p>b. v-for 列表渲染<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># 当 Vue.js 用 v-for 正在更新已渲染过的元素列表时，它默认用“就地复用”策略。</span><br><span class="line"># 如果数据项的顺序被改变，Vue 将不会移动 DOM 元素来匹配数据项的顺序，</span><br><span class="line"># 而是简单复用此处每个元素，并且确保它在特定索引下显示已被渲染过的每个元素。</span><br><span class="line">#  so. 列表渲染，被渲染组件要有唯一的key值，不应该使用index作为key值，否则会产生bug</span><br><span class="line">&lt;div v-for=&quot;item in items&quot; :key=&quot;item.id&quot;&gt;</span><br><span class="line">  &lt;!-- 内容 --&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure></p>
-<p><a href="http://jsrun.net/NgZKp/edit" target="_blank" rel="noopener">:key=”index” 复现bug</a></p>
-<p>4、修饰符<br>.prevent 、.stop 、.laze</p>
-<p>5、 组件通信 — 数据的流动</p>
-<ul>
-<li><p>组件内部通讯(data、computed)<br><img src="https://upload-images.jianshu.io/upload_images/5903867-717bb0cce7199c1f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="data/computed"></p>
-</li>
-<li><p>父组件 =&gt; 子组件 （props）<br>当子组件想访问父组件的值的时候，我们可以通过子组件的props属性，将父组件的值传递给子组件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">单向数据流</span><br><span class="line">Vue采用的是单向数据流方式，数据只能从父组件流向子组件，</span><br><span class="line">子组件不能修改父组件传入的数据，否则Vue会给与警告。</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p><img src="https://upload-images.jianshu.io/upload_images/5903867-aae29dcd2ec7f2c5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="props"></p>
-<ul>
-<li><p>子组件 =&gt; 父组件<br>官网推荐的方法是在子组件中通过v-on绑定自定义事件来实现<br>每个 Vue 实例都实现了事件接口，即：<br>使用 $on(eventName) 监听事件<br>使用 $emit(eventName) 触发事件<br>这个的运行跟我们常用的dom原生的事件机制是一样的。父组件注册好监听事件，当子组件需要对父组件进行操作的时候，调用触发函数，触发事件。<br>代码案例： <a href="http://jsrun.net/IgZKp/edit" target="_blank" rel="noopener">Vue子组件传值给父组件</a></p>
-</li>
-<li><p>非父子组件的相互通信<br><img src="https://upload-images.jianshu.io/upload_images/5903867-9dee74b23d09ae2f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="event bus"></p>
-</li>
-</ul>
-<h4 id="状态管理模式-vuex"><a href="#状态管理模式-vuex" class="headerlink" title="状态管理模式 vuex"></a>状态管理模式 <a href="https://vuex.vuejs.org/zh-cn/" target="_blank" rel="noopener">vuex</a></h4><h4 id="slot分发内容"><a href="#slot分发内容" class="headerlink" title="slot分发内容"></a>slot分发内容</h4><p>为了让组件可以组合，我们需要一种方式来混合父组件的内容与子组件自己的模板。这个过程被称为<strong>内容分发</strong> (即 Angular 用户熟知的“transclusion”)。Vue.js 实现了一个内容分发 API，参照了当前 <a href="https://github.com/w3c/webcomponents/blob/gh-pages/proposals/Slots-Proposal.md" target="_blank" rel="noopener">Web Components 规范草案</a>，使用特殊的 <code>&lt;slot&gt;</code> 元素作为原始内容的插槽。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">使用slot的好处就是可以定制个性化组件结构</span><br></pre></td></tr></table></figure></p>
-<ul>
-<li><h4 id="单个插槽"><a href="#单个插槽" class="headerlink" title="单个插槽"></a><a href="https://cn.vuejs.org/v2/guide/components.html#%E5%8D%95%E4%B8%AA%E6%8F%92%E6%A7%BD" title="单个插槽" target="_blank" rel="noopener">单个插槽</a></h4><p><img src="https://upload-images.jianshu.io/upload_images/5903867-8d9bead2ae781c76.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="单个插槽"></p>
-</li>
-<li><h4 id="具名插槽"><a href="#具名插槽" class="headerlink" title="具名插槽"></a><a href="https://cn.vuejs.org/v2/guide/components.html#%E5%85%B7%E5%90%8D%E6%8F%92%E6%A7%BD" title="具名插槽" target="_blank" rel="noopener">具名插槽</a></h4><p><img src="https://upload-images.jianshu.io/upload_images/5903867-370c3fe88b383fec.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="具名插槽"></p>
-</li>
-<li><h4 id="作用域插槽"><a href="#作用域插槽" class="headerlink" title="作用域插槽"></a><a href="https://cn.vuejs.org/v2/guide/components.html#%E4%BD%9C%E7%94%A8%E5%9F%9F%E6%8F%92%E6%A7%BD" title="作用域插槽" target="_blank" rel="noopener">作用域插槽</a></h4></li>
-</ul>
-<p>子组件将数据像props一样，传递到父组件中，使得父组件根据数据映射视图，并插入到子组件slot的位置。。 </p>
-<p>这个功能太变态。。。 实在不明白这样搞有什么用。。。</p>
-<h1 id="vue知识点扩展："><a href="#vue知识点扩展：" class="headerlink" title="vue知识点扩展："></a>vue知识点扩展：</h1><ul>
-<li><a href="https://cn.vuejs.org/v2/guide/components.html#%E5%BC%82%E6%AD%A5%E7%BB%84%E4%BB%B6" target="_blank" rel="noopener">异步组件</a></li>
-<li><a href="https://cn.vuejs.org/v2/guide/mixins.html" target="_blank" rel="noopener">mixins</a></li>
-<li><a href="https://cn.vuejs.org/v2/guide/filters.html" target="_blank" rel="noopener">过滤器</a></li>
-<li><a href="https://cn.vuejs.org/v2/guide/reactivity.html" target="_blank" rel="noopener">深入vue响应式原理</a></li>
-<li><a href="https://cn.vuejs.org/v2/guide/ssr.html" target="_blank" rel="noopener">SSR</a></li>
-<li><a href="https://cn.vuejs.org/v2/guide/unit-testing.html" target="_blank" rel="noopener">单元测试</a></li>
-</ul>
-<h1 id="vue技术栈扩展："><a href="#vue技术栈扩展：" class="headerlink" title="vue技术栈扩展："></a>vue技术栈扩展：</h1>
-        
-      
-    </div>
-
-    
-
-    
-
-  </article>
-
-    
-      
-  <article class="post">
-    <header class="post-header">
-      <h1 class="post-title">
-        
-          <a class="post-link" href="/Blog/2018/04/08/如何成为一名优秀的全栈工程师/">如何成为一名优秀的全栈工程师</a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <span class="post-time">
-          2018-04-08
-        </span>
-        
-        
-      </div>
-    </header>
-
-    
-    
-
-    <div class="post-content">
-      
-        
-        
-
-        
-          <h3 id="写在最前"><a href="#写在最前" class="headerlink" title="写在最前"></a>写在最前</h3><p>我的前一篇文章<a href="https://www.jianshu.com/p/cb49694dd698?spm=a2c4e.11155515.0.0.XB6hgh" target="_blank" rel="noopener">《给职场新人的10点职涯建议》</a>发表后，得到了很多简友，特别是年轻程序员朋友们的喜爱，这令我颇感意外，但又很受鼓舞。同时，我也收到了一些简信，大多来自那些毕业不久，刚步入工作岗位的职场新人。询问的内容也大多是如何选择职业方向，如何成为一名优秀的软件工程师，以及怎样快速提高自身的技能等。我在一一回复的同时，不禁想结合自身的经历，谈谈如何才能成为一名优秀的全栈工程师。 </p>
-<h3 id="什么是全栈工程师"><a href="#什么是全栈工程师" class="headerlink" title="什么是全栈工程师"></a>什么是全栈工程师</h3><p>全栈工程师一词，最早出现于Facebook工程师Calos Bueno的一篇文章 - Full Stack （需fanqiang）。他把全栈工程师定义为对性能影响有着深入理解的技术通才。自那以后全栈这个词便流行起来，我看到过的就有全栈工程师，全栈设计师，全栈运维，全栈市场营销人员等等。而在“拉钩”，“100Offer”等针对互联网人才的招聘网站上，全栈工程师更是一跃成为热门招聘职位，其薪资水平也比一般的开发工程师职位要高出一截。那么，什么是全栈工程师，我们又应该如何定义一名全栈工程师呢？ </p>
-<p>百度百科对全栈工程师的定义是这样的：“掌握多种技能，并能利用多种技能独立完成产品的人”。我觉得这个定义还不够全面，我认为全栈工程师应该同时是一位资深开发工程师、架构师以及具有敏捷开发技能的程序员。全栈工程师对于软件开发的认识往往已经进化了，他们把特定的技术抛到了身后，明白技术的更新始终比计算机理论要快的道理，因此，他们注重强化自身的核心技能，关注并乐于实践其他技术。全栈工程师往往是某一方面的专家，同时通晓并善于在正确的场合运用其他语言、工具和技术。 </p>
-<h3 id="全栈工程师的价值"><a href="#全栈工程师的价值" class="headerlink" title="全栈工程师的价值"></a>全栈工程师的价值</h3><p>随着时间的推移，全栈工程师的作用和价值在越来越多的产品或项目中得到了印证。那么，我们来看看全栈工程师对于个人或公司意味着什么。</p>
-<ul>
-<li><p>个人价值及自由度的极大提升 —— 我曾看过一些介绍全栈工程师的文章，文中大多强调了全栈工程师对于公司与团队的价值。而我想说的是，没有一个优秀的全栈工程师是因为会对公司产生多大的利益，而努力学习各种技术的。我所认识的他们，都是那些有着一颗匠心，不断追求更高技能，并执着于做出更优秀产品的人。而当你成为一名真正的全栈工程师后，会感受到前所未有的个人价值与技术自由度的提升。试想当一个很好的创意出现时，你可以一个人或主导一个团队去实现并不断完善它，这是一件多么让人兴奋的事啊！</p>
-</li>
-<li><p>全局思维与技术前瞻性 —— 由于具备了各个开发环节与技术领域的知识，全栈工程师往往具有更好的大局观和技术前瞻性，能够在项目初期就选择正确的技术，并很好地把控一个项目的整体方向。现代项目往往非常复杂，而全栈工程师往往能带来技术和质量上的保障，从而成为一个项目成功的关键人物。</p>
-</li>
-<li><p>降低沟通成本 —— 我经常听到有设计师抱怨前端工程师无法百分之百地还原他们的设计，而前端工程师又在抱怨后端工程师从接口返回的数据更本无法直接使用，后端工程师也在抱怨产品经理所提的需求根本无法完成。随着团队人数的上升，由于各自技能栈的不同，沟通成本一定会随之上升。全栈工程师除了能够独立完成前后端的开发（甚至包括设计）外，如果能够在项目初期提前介入，便能很好地规避技术风险，过滤不合理的需求，从而显著降低因不同技术差异导致的沟通问题，显著降低项目风险。</p>
-</li>
-<li><p>初创公司 —— 我们已经来到了一个万众创业，全民创新的时代。那些初创公司也如雨后春笋般不断涌现。初创公司往往都有了一个不错的创意，但经常会遇到“就缺一个程序员”的尴尬。我想说的是，他们其实并不是缺程序员，而是缺一位全栈工程师。初创公司往往资金有限，而一名优秀的全栈工程师能够帮助初创公司用最低的代价与最短的时间推出自己的产品。这是初创公司能够存活下来，拿到更多投资，甚至成为“独角兽”一员的最关键一步。</p>
-</li>
-</ul>
-<h3 id="全栈工程师的技能栈"><a href="#全栈工程师的技能栈" class="headerlink" title="全栈工程师的技能栈"></a>全栈工程师的技能栈</h3><p>看到这里你一定会问，到底需要具备怎样的技能才能成为一名全栈工程呢？下面这张图来自Medium，作者将软件开发所涉及的各个方面分为层，又将每个层所包含的主要技术作为组件，制作了这张全栈技术图。</p>
-<p>从上面这张图，我们不难发现，现在的技术体系是多么庞大，每一年又会有新的技术加入到这些层中，而已有的技术又在不断地更新。因此要掌握所有技术是根本不可能的，而成为全栈工程师也并不需要你真的掌握所有的技术，你应该将自己的精力聚焦于关键开发技能以及一些必须掌握的附加技能上。 </p>
-<h3 id="关键开发技能（硬实力）："><a href="#关键开发技能（硬实力）：" class="headerlink" title="关键开发技能（硬实力）："></a>关键开发技能（硬实力）：</h3><ul>
-<li><p>Git / GitHub —— 你必须掌握如何使用Git来管理和分享你的代码。把Git作为关键技能的第一条，是因为它不仅仅是一个代码管理工具，更是一种推荐的工作方式。它使你能在任何地方进行开发，高效地管理任何大小的项目，通过Git你还能与其他团队成员进行分布式协作，大大提升工作效率。通过GitHub，还能将你与世界所有的开发者联系在一起。</p>
-</li>
-<li><p>至少一门编程语言 —— 你需要精通至少一门编程语言，JAVA 、PHP、C#、Python、Ruby、Perl 等，因为你的大多数核心业务处理都需要用这门语言来写。你既要掌握这门语言的语法，又需要非常熟悉如何基于这门语言进行项目的架构、设计、实现以及测试。如果你选择的是JAVA，那么你就需要掌握面向对象的设计和开发，设计模式的应用，基于J2EE各个组件的开发 等等。</p>
-</li>
-<li><p>运用开发框架和第三方库 —— 流行的开发语言，一般都伴有出色的开发框架，比如JAVA的Spring、MyBatis、Hibernate，Python的Django，PHP的 thinkphp、yin，nodeJs的 express 等等。这些开发框架往往都遵循软件开发领域的一些最佳实践，并由非常优秀的开发人员创建。熟练使用这些开发框架或第三方库能够避免重复发明轮子，使你的工作事半功倍。更重要的是这些优秀框架或第三方库的一般都得到持续的维护，是对你的产品或项目在质量与安全方便的最有效的保障。</p>
-</li>
-<li><p>前端技术 —— 之所以将前端技术独立出来，作为一项关键技术，是因为它在今天的项目和产品的研发过程中正变得越来越重要。一个产品除了实现所需的功能之外，是否好用（用户体验）也正在成为评判一个产品是否成功的重要标准。而这都依赖于前端技术的实现，你至少需要掌握 HTML5、CSS3、JavaScript 等基本前端技术，同时进一步学习 JQuery\、LESS、SASS、AngularJS或REACT等前端框架或第三方库。</p>
-</li>
-<li><p>数据库与缓存 —— 任何产品或项目都需要一个数据库来存储数据。作为全栈工程师，你也需要至少掌握一到两个数据库，并知道怎样与数据库进行交互。目前流行的数据库主要有MySQL、MongoDB、Redis、Oracle、SQLServer等。MongoDB作为文档型数据库，在互联网产品中正被越来越多地使用，对于规模稍大一些的项目，我仍推荐使用MySQL或商用的Oracle作为后端数据库。而Redis这样的内存数据库则可以用于缓存，以提升系统的性能。</p>
-</li>
-<li><p>基本设计能力 —— 大部分关于全栈工程师的文章或讨论中，都不会将设计能力做为全栈工程师的关键技能，但我却认为这项技能非常重要。我曾被邀请评估一些软件工程师自己开发的产品，这些产品都有不错的创意，功能实现也很到位，但一看就不是一个好的产品，用户根本没有使用欲望，原因是这些产品的设计太差了，而往往那些开发者完全没有意识到问题的存在，比如色彩的不一致，排版的凌乱，不恰当的图标 等等。我所建议的基本设计能力，并不要求你像专业设计师那样能够P出神图、制作奇妙的视觉效果等，但你需要掌握最基本的UI设计原则，如 色彩的搭配，基本的排版，并具备良好的审美能力，和一些基本UI设计能力，这样你做的产品就不会太差了。</p>
-</li>
-</ul>
-<p>在掌握了这些核心技能之后，你可以根据自己的兴趣与发展方向，学习其他方面的技术。比如，如果你对数据处理感兴趣，那么你可以学习大数据方面的技术。如果你对移动互联网更感兴趣，那么你可以学习Swit，开发ios应用。知识总是相通的，在有了良好的技术基础后，学习其他知识将会变得非常容易。 </p>
-<h3 id="附加技能（软实力）："><a href="#附加技能（软实力）：" class="headerlink" title="附加技能（软实力）："></a>附加技能（软实力）：</h3><ul>
-<li><p>沟通 —— 除非你是在做个人项目，对于稍大一些的项目，你总是需要与同事、干系人或是客户进行沟通的。而成功的沟通往往是获得有效需求，与建立团队信心的第一步。在项目的进行过程中，你更需要通过有效的沟通去确定方案，消除误解，与项目成员协同前进。良好的沟通能力将使你在团队中更具影响力，收到更多尊重和关注。</p>
-</li>
-<li><p>问题解决能力 —— 全栈工程师首先是一名工程师，他必须掌握工程化的方法来解决遇到的各种问题。我在职业生涯中的几乎所有亮点，都与解决问题相关，大到提供整个项目的架构方案，小到以最快的速度解决生产问题 等。其实有很多提高问题解决能力的方法，但没有一种比实践更有效。我所见到的优秀工程师，往往能够凭借直觉以最短的时间给出正确的解决方案，但你可能没有看到的是，在这背后其实是经过大量实践累积而来的经验。</p>
-</li>
-<li><p>时间管理 —— 作为全栈工程师，你可能会被安排同时在不同的项目中承担不同的角色。你需要合理地分配时间，保证所有的工作能够按时交付。同样在你的业余时间，你还需要花时间阅读和学习，同时你还可能会有自己的Side Project。因此，合理地进行时间分配，并对一些关键任务，进行计划是很重要的。你或许会感到一些压力，但这反而会激发你的创造力，并能让一切都有条不紊地进行。</p>
-</li>
-<li><p>好奇心 —— 对任何工作都抱有好奇心，并愿意不断学习和改善是那些优秀工程师的共同特性。软件开发领域汇集了世界上最聪明的人，各种类型的技术、产品、框架更是日新月异，层出不穷。优秀的全栈工程师需要不断地学习来抓住这些变化，跟上计算机领域发展的脚步。时常有人会问我，做计算机这一行一直会有新的东西产生，要去不断地学习，是不是会很累。我要说的是，对于将持续学习作为一种生活习惯的人来说，学习新东西并不会成为一种负担，反而是一种乐趣。</p>
-</li>
-<li><p>领导力 —— 优秀的全栈工程师往往会被赋予技术Leader甚至项目管理者的角色。成为管理者并不是让你去支配其他人，或让其他人替你做事。管理者需要理解你的团队成员的长处与不足，并知道如何以服务的态度使团队获得最大化的产出。我见过一些非常优秀的工程师，当他们被安排去管理团队时，他们是排斥的，他们往往更愿意独自工作。但我想说，成为管理者，将会使你更加睿智、可靠和值得他人信赖，也会对你未来的职业生涯带来极大的益处。因此，当机会到来时，请将它视为挑战，不要排斥它。</p>
-</li>
-</ul>
-<p>有经验的技术领导者在招聘时，往往会同时考察应聘者技术能力与上述附加技能，而对于初级程序员的招聘来说，那些附加技能往往更被优秀的技术公司所看重。开发技能是你的硬实力，而附加技能则可以看作是你的软实力，只有同时具备这两方面技能，才能成为一名优秀的全栈工程师。 </p>
-<h3 id="优秀的全栈工程师需要走出去"><a href="#优秀的全栈工程师需要走出去" class="headerlink" title="优秀的全栈工程师需要走出去"></a>优秀的全栈工程师需要走出去</h3><p>优秀的全栈工程师不应局限于自己的工作，他更应该走出去，接触不同的技术，分享自己的经验和心得，认识更多的朋友。下面便是我的一些做法。</p>
-<ul>
-<li><p>参加技术大会 —— InfoQ、CSDN、GITC、优设、TED 等网站都会定期举办各类技术大会。在这些大会上，你不仅能够听到技术大咖们带来的各自领域最佳技术实践，而且能认识很多行业内的朋友。这对你开拓思路，扩大技术社交圈都很有帮助。因此，如果公司没有安排你去参加这些技术大会的话，那就自己买票参加，作为对自己的一种投资吧。</p>
-</li>
-<li><p>作公开演讲 —— 全栈工程师并不需要是一个公开演讲者，但作为团队的核心成员，他一定需要在团队内部做技术、管理等方面的进行演讲。如果你是一个乐于分享的技术达人，那么也可以尝试录制个人课程（视频或音频），并在慕课、网易课堂、优酷 或 像 荔枝、喜马拉雅 等各种媒体分享自己的技能和知识，不要因为自己并不是专家就不愿尝试，相信我，你用心制作的内容，会获得大家的认可，并收获一大批粉丝的。</p>
-</li>
-<li><p>个人博客 —— 每天进步一点点，一年以后你便会获得质的飞跃。优秀的全栈工程师懂得如何进行知识的积累，而技术博客就是一个很好的方式，将自己平时的实践、思考记录下来，配以tag标签方便日后的回顾。最有意思的是，当你在不断记录和更新你的博客同时，世界各地的程序员也会通过你的博客认识你。</p>
-</li>
-<li><p>参加线下活动 —— 与以前程序员总是宅在家里不同，现在的年轻程序员们更愿意分享和交流。很多网站也会组织不同技术主题的线下活动，在这些活动中你可以听到一些技术牛人的分享，还可以找到很多和你一样对技术富有激情的人。而我现在所做的开源项目中的很多团队成员，正是我在这些线下活动中结识的。</p>
-</li>
-</ul>
-<p>全栈工程师决不是一夜练成的，你需要打好技术基础，强化核心技能，并持续学习。相信有一天你也能像我一样，感受到自由地运用技术，开发出优秀产品所带来的乐趣的。<br>看了受益匪浅啊~~~ </p>
-<p>原文转自:<a href="http://www.jianshu.com/p/f0d134ed7fd0" target="_blank" rel="noopener">http://www.jianshu.com/p/f0d134ed7fd0</a></p>
-
+          <div class="read-more">
+            <a href="/Blog/2018/04/10/vue 学习分享/" class="read-more-link">阅读更多</a>
+          </div>
         
       
     </div>
@@ -500,6 +305,8 @@
       
         
         
+          
+        
 
         
           <h1 id="组件划分思路"><a href="#组件划分思路" class="headerlink" title="组件划分思路"></a>组件划分思路</h1><h2 id="组件职责划分"><a href="#组件职责划分" class="headerlink" title="组件职责划分"></a>组件职责划分</h2><pre><code>一个组件只做一件事，基于功能做好职责划分。
@@ -510,15 +317,53 @@
 <li>业务组件</li>
 <li>容器组件</li>
 </ol>
-<h2 id="组件设计原则"><a href="#组件设计原则" class="headerlink" title="组件设计原则"></a>组件设计原则</h2><ol>
-<li>尽可能的减少状态</li>
-<li>合理的依赖关系</li>
-<li>扁平化参数</li>
-<li>良好的接口设计</li>
-</ol>
-<p>引用</p>
-<p><a href="http://imys.net/20170317/write-good-front-end-component.html" target="_blank" rel="noopener">编写良好的前端组件</a></p>
+          <div class="read-more">
+            <a href="/Blog/2018/04/08/vue组件开发总结/" class="read-more-link">阅读更多</a>
+          </div>
+        
+      
+    </div>
 
+    
+
+    
+
+  </article>
+
+    
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          <a class="post-link" href="/Blog/2018/04/08/如何成为一名优秀的全栈工程师/">如何成为一名优秀的全栈工程师</a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2018-04-08
+        </span>
+        
+        
+      </div>
+    </header>
+
+    
+    
+
+    <div class="post-content">
+      
+        
+        
+          
+        
+
+        
+          <h3 id="写在最前"><a href="#写在最前" class="headerlink" title="写在最前"></a>写在最前</h3><p>我的前一篇文章<a href="https://www.jianshu.com/p/cb49694dd698?spm=a2c4e.11155515.0.0.XB6hgh" target="_blank" rel="noopener">《给职场新人的10点职涯建议》</a>发表后，得到了很多简友，特别是年轻程序员朋友们的喜爱，这令我颇感意外，但又很受鼓舞。同时，我也收到了一些简信，大多来自那些毕业不久，刚步入工作岗位的职场新人。询问的内容也大多是如何选择职业方向，如何成为一名优秀的软件工程师，以及怎样快速提高自身的技能等。我在一一回复的同时，不禁想结合自身的经历，谈谈如何才能成为一名优秀的全栈工程师。 </p>
+          <div class="read-more">
+            <a href="/Blog/2018/04/08/如何成为一名优秀的全栈工程师/" class="read-more-link">阅读更多</a>
+          </div>
         
       
     </div>
