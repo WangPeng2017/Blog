@@ -1,3 +1,9 @@
+---
+title: vue学习分享
+date: 2018-04-08 23:30:56
+tags: vue
+---
+
 ps: 因为公司业务需求，最近学习了一段时间Vue+node，关于哪个前端框架更好，仁者见智，
 这里列一下前端各框架性能对比 [Vue vs React / Vue vs AngularJs](https://cn.vuejs.org/v2/guide/comparison.html)
  
