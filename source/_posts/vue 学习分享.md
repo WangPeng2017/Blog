@@ -1,6 +1,6 @@
 ---
 title: vue学习分享
-date: 2018-04-08 23:30:56
+date: 2018-04-10 23:30:56
 tags: vue
 ---
 
@@ -18,6 +18,8 @@ $ vue init webpack my-project
 $ cd my-project
 $ npm run dev
 ```
+
+<!-- more -->
 
 ![项目目录](https://upload-images.jianshu.io/upload_images/5903867-7a26c2cf4afc74a6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
@@ -51,7 +53,7 @@ module1、module2分文件夹，是解决大型项目路由复杂的问题。业
 a. 标签导航 <router-link to="/foo">Go to Foo</router-link>
 b. 编程式导航  $router.push()、$router.replace()
 ```
-查看详细：[ vue-router](https://router.vuejs.org/zh-cn/essentials/getting-started.html)
+查看详细：[vue-router](https://router.vuejs.org/zh-cn/essentials/getting-started.html)
 
 #### 三、[axios](https://github.com/axios/axios)(vue-resource已经不再维护，vue2.0官方推荐使用axios)
 
@@ -172,7 +174,9 @@ vue 的核心思想是，数据驱动和组件化。
 ![组件树](https://upload-images.jianshu.io/upload_images/5903867-7287367a0d8f9202.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 3、指令
-文本{{  }} 、 v-html、v-show、v-if、v-else、v-if-else、v-once、v-bind、v-for、v-on、
+文本 {% raw %}
+{{ }} 、
+{% endraw %} v-html、v-show、v-if、v-else、v-if-else、v-once、v-bind、v-for、v-on、
 
 #### 区别点
 a. v-if vs v-show
@@ -256,12 +260,3 @@ Vue采用的是单向数据流方式，数据只能从父组件流向子组件�
 * [单元测试](https://cn.vuejs.org/v2/guide/unit-testing.html)
 
 # vue技术栈扩展：
-
-
-
-
-
-
-
-
-
