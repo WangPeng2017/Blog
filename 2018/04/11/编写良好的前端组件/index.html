@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head><meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+<meta name="description" content="编写良好的前端组件"/><meta name="keywords" content="组件 设计, just a coder" /><link rel="alternate" href="/default" title="just a coder"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.11.0" />
+<link rel="canonical" href="https://wangpeng2017.github.io/2018/04/11/编写良好的前端组件/"/>
+
+<link rel="stylesheet" type="text/css" href="/lib/fancybox/jquery.fancybox.css" /><link rel="stylesheet" type="text/css" href="/lib/nprogress/nprogress.min.css" />
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=2.11.0" />
+
+<script id="baidu_push">
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<script>
+  window.config = {"leancloud":{"app_id":null,"app_key":null},"toc":true,"fancybox":true,"pjax":true};
+</script>
+
+    <title>编写良好的前端组件 - just a coder</title>
+  </head>
+
+  <body><div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/." class="logo">just a coder</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list"><a href="/">
+        <li class="mobile-menu-item">首页
+          </li>
+      </a></ul>
+</nav>
+<div class="container" id="mobile-panel">
+      <header id="header" class="header"><div class="logo-wrapper">
+  <a href="/." class="logo">just a coder</a>
+</div>
+
+<nav class="site-navbar"><ul id="menu" class="menu"><li class="menu-item">
+          <a class="menu-item-link" href="/">
+            首页
+            </a>
+        </li>
+      </ul></nav>
+</header>
+
+      <main id="main" class="main">
+        <div class="content-wrapper">
+          <div id="content" class="content"><article class="post">
+    <header class="post-header">
+      <h1 class="post-title">编写良好的前端组件
+        </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2018-04-11
+        </span></div>
+    </header>
+
+    <div class="post-content"><p>#编写良好的前端组件</p>
+<p>Vue 和 React 的大红大火，带来的是新的开发方式 — 组件化和数据驱动<br>随着webpack等构建工具的完善，前端代码具备了后端编程语言的代码组织能力，故，作为前端也该对自己的代码有更高的要求。</p>
+<a id="more"></a>
+<p>#组件职责划分</p>
+<p>一个组件只做一件事，基于功能做好职责划分。</p>
+<p>#组件的分类</p>
+<p>无状态组件、端对端组件、UI组件、业务组件、容器组件</p>
+<p>#组件设计原则</p>
+<p>##尽可能的减少状态</p>
+<ol>
+<li>如果一个数据可以由另一个 state 变换得到，那么这个数据就不是一个 state。只需要写一个变换的处理函数，在 Vue 中可以使用计算属性。</li>
+<li>不要重复自己。如果你的 state 是一个数组，而模版最外层是渲染这个数组，那么你需要做的事是把渲染的项作为一个组件，只接受一个单级对象形式的数据，由外部决定这个组件的展示次数。</li>
+<li>如果一个数据是固定的，不会变化的常量，那么这个数据就如同 HTML 固定的站点标题一样，写死或作为全局配置属性等，不属于 state。</li>
+<li>如果一个数据需要从外部得到，它应该属于 props。</li>
+<li>如果组件和兄弟组件拥有相同的 state，那么这个 state 应该放到更高的层级中，使用 props 传递到两个组件中。</li>
+</ol>
+<p>##合理的依赖关系</p>
+<ol>
+<li>父组件不依赖子组件。要做到当我们把子组件删除后，只是丢失了一个功能，或一个模块等，而不会造成父组件及兄弟组件功能异常。</li>
+<li>子组件基于父组件传递 props 作出个性化展示。</li>
+</ol>
+<p>##扁平化参数</p>
+<p>像 HTML 原生元素那样，只接受原始类型（字符串、数值、布尔值和函数）作为属性，避免复杂的对象。当然，数据除外。</p>
+<p>##良好的接口设计</p>
+<ol>
+<li>把组件内部可以完成的工作做到极致。虽然提倡拥抱变化，但接口不是越多越好。</li>
+<li>如果常量变为 props 能应对更多的场景，那么就可以作为 props。原有的常量可作为默认值。</li>
+<li>如果组件不能提供调用者所需求的功能，那么这个组件的接口还不够完善。</li>
+<li>如果需要为了某一调用者编写大量特定需求的代码，那么可以考虑通过扩展等方式构建一个新的组件。</li>
+<li>保证组件的属性和事件足够的给大多数的组件使用。</li>
+</ol>
+
+      </div>
+      <div class="post-copyright">
+    <p class="copyright-item">
+      <span>原文作者: </span>
+      <a href="https://wangpeng2017.github.io">王鹏</a>
+    </p>
+    <p class="copyright-item">
+      <span>原文链接: </span>
+      <a href="https://wangpeng2017.github.io/2018/04/11/编写良好的前端组件/">https://wangpeng2017.github.io/2018/04/11/编写良好的前端组件/</a>
+    </p>
+    <p class="copyright-item">
+      <span>许可协议: </span><a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>
+    </p>
+  </div>
+      <footer class="post-footer">
+        <div class="post-tags">
+            <a href="/tags/组件-设计/">组件 设计</a>
+            </div>
+        
+        <nav class="post-nav"><a class="prev" href="/2019/03/08/test/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text nav-default"></span>
+        <span class="prev-text nav-mobile">上一篇</span>
+      </a>
+    <a class="next" href="/2018/04/10/vue 学习分享/">
+        <span class="next-text nav-default">vue学习分享</span>
+        <span class="prev-text nav-mobile">下一篇</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    </nav></footer>
+    </article></div><div class="comments" id="comments"></div></div>
+      </main>
+
+      <footer id="footer" class="footer"><div class="social-links"><a href="mailto:your@email.com" class="iconfont icon-email" title="email"></a>
+        <a href="https://github.com/ahonn" class="iconfont icon-github" title="github"></a>
+        <a href="/atom.xml" class="iconfont icon-rss" title="rss"></a>
+    </div><div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://hexo.io/">Hexo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">&copy;2015 - 2019<span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">王鹏</span>
+  </span>
+</div>
+</footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div><script type="text/javascript" src="/lib/jquery/jquery.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/lib/pjax/jquery.pjax.min.js"></script>
+  <script type="text/javascript" src="/lib/nprogress/nprogress.min.js"></script>
+  <script type="text/javascript" src="/js/src/even.js?v=2.11.0"></script>
+</body>
+</html>
