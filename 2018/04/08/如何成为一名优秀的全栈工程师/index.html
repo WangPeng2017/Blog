@@ -1,94 +1,306 @@
 <!DOCTYPE html>
-<html lang="zh">
-  <head><meta charset="UTF-8"/>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh">
+<head>
+  <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
 
 
 <meta http-equiv="Cache-Control" content="no-transform" />
 <meta http-equiv="Cache-Control" content="no-siteapp" />
 
-<meta name="theme-color" content="#f8f5ec" />
-<meta name="msapplication-navbutton-color" content="#f8f5ec">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
-<meta name="description" content="如何成为一名优秀的全栈工程师"/><meta name="keywords" content="全栈 node 前端, just a coder" /><link rel="alternate" href="/default" title="just a coder"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.11.0" />
-<link rel="canonical" href="https://http://blog.aiyunxiao.top/2018/04/08/如何成为一名优秀的全栈工程师/"/>
 
-<link rel="stylesheet" type="text/css" href="/lib/fancybox/jquery.fancybox.css" /><link rel="stylesheet" type="text/css" href="/lib/nprogress/nprogress.min.css" />
-<link rel="stylesheet" type="text/css" href="/css/style.css?v=2.11.0" />
 
-<script id="baidu_push">
-(function(){
-    var bp = document.createElement('script');
-    var curProtocol = window.location.protocol.split(':')[0];
-    if (curProtocol === 'https') {
-        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/Blog/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/Blog/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/Blog/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/Blog/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/Blog/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/Blog/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/Blog/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="全栈 node 前端," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="写在最前我的前一篇文章《给职场新人的10点职涯建议》发表后，得到了很多简友，特别是年轻程序员朋友们的喜爱，这令我颇感意外，但又很受鼓舞。同时，我也收到了一些简信，大多来自那些毕业不久，刚步入工作岗位的职场新人。询问的内容也大多是如何选择职业方向，如何成为一名优秀的软件工程师，以及怎样快速提高自身的技能等。我在一一回复的同时，不禁想结合自身的经历，谈谈如何才能成为一名优秀的全栈工程师。">
+<meta name="keywords" content="全栈 node 前端">
+<meta property="og:type" content="article">
+<meta property="og:title" content="如何成为一名优秀的全栈工程师">
+<meta property="og:url" content="https://wangpeng2017.github.io/Blog/2018/04/08/如何成为一名优秀的全栈工程师/index.html">
+<meta property="og:site_name" content="just a coder">
+<meta property="og:description" content="写在最前我的前一篇文章《给职场新人的10点职涯建议》发表后，得到了很多简友，特别是年轻程序员朋友们的喜爱，这令我颇感意外，但又很受鼓舞。同时，我也收到了一些简信，大多来自那些毕业不久，刚步入工作岗位的职场新人。询问的内容也大多是如何选择职业方向，如何成为一名优秀的软件工程师，以及怎样快速提高自身的技能等。我在一一回复的同时，不禁想结合自身的经历，谈谈如何才能成为一名优秀的全栈工程师。">
+<meta property="og:locale" content="zh">
+<meta property="og:updated_time" content="2019-04-08T02:21:44.485Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="如何成为一名优秀的全栈工程师">
+<meta name="twitter:description" content="写在最前我的前一篇文章《给职场新人的10点职涯建议》发表后，得到了很多简友，特别是年轻程序员朋友们的喜爱，这令我颇感意外，但又很受鼓舞。同时，我也收到了一些简信，大多来自那些毕业不久，刚步入工作岗位的职场新人。询问的内容也大多是如何选择职业方向，如何成为一名优秀的软件工程师，以及怎样快速提高自身的技能等。我在一一回复的同时，不禁想结合自身的经历，谈谈如何才能成为一名优秀的全栈工程师。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/Blog/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
     }
-    else {
-        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-    }
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(bp, s);
-})();
-</script>
-<script>
-  window.config = {"leancloud":{"app_id":null,"app_key":null},"toc":true,"fancybox":true,"pjax":true};
+  };
 </script>
 
-    <title>如何成为一名优秀的全栈工程师 - just a coder</title>
-  </head>
 
-  <body><div id="mobile-navbar" class="mobile-navbar">
-  <div class="mobile-header-logo">
-    <a href="/." class="logo">just a coder</a>
+
+  <link rel="canonical" href="https://wangpeng2017.github.io/Blog/2018/04/08/如何成为一名优秀的全栈工程师/"/>
+
+
+
+
+
+  <title>如何成为一名优秀的全栈工程师 | just a coder</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/Blog/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">just a coder</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
   </div>
-  <div class="mobile-navbar-icon">
-    <span></span>
-    <span></span>
-    <span></span>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
   </div>
 </div>
 
-<nav id="mobile-menu" class="mobile-menu slideout-menu">
-  <ul class="mobile-menu-list"><a href="/">
-        <li class="mobile-menu-item">首页
-          </li>
-      </a></ul>
-</nav>
-<div class="container" id="mobile-panel">
-      <header id="header" class="header"><div class="logo-wrapper">
-  <a href="/." class="logo">just a coder</a>
-</div>
+<nav class="site-nav">
+  
 
-<nav class="site-navbar"><ul id="menu" class="menu"><li class="menu-item">
-          <a class="menu-item-link" href="/">
-            首页
-            </a>
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/Blog/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Startseite
+          </a>
         </li>
-      </ul></nav>
-</header>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/Blog/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archiv
+          </a>
+        </li>
+      
 
-      <main id="main" class="main">
-        <div class="content-wrapper">
-          <div id="content" class="content"><article class="post">
-    <header class="post-header">
-      <h1 class="post-title">如何成为一名优秀的全栈工程师
-        </h1>
+      
+    </ul>
+  
 
-      <div class="post-meta">
-        <span class="post-time">
-          2018-04-08
-        </span></div>
+  
+</nav>
+
+
+
+ </div>
     </header>
 
-    <div class="post-toc" id="post-toc">
-    <h2 class="post-toc-title">文章目录</h2>
-    <div class="post-toc-content">
-      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#写在最前"><span class="toc-text">写在最前</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#什么是全栈工程师"><span class="toc-text">什么是全栈工程师</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#全栈工程师的价值"><span class="toc-text">全栈工程师的价值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#全栈工程师的技能栈"><span class="toc-text">全栈工程师的技能栈</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#关键开发技能（硬实力）："><span class="toc-text">关键开发技能（硬实力）：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#附加技能（软实力）："><span class="toc-text">附加技能（软实力）：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#优秀的全栈工程师需要走出去"><span class="toc-text">优秀的全栈工程师需要走出去</span></a></li></ol>
-    </div>
-  </div><div class="post-content"><h3 id="写在最前"><a href="#写在最前" class="headerlink" title="写在最前"></a>写在最前</h3><p>我的前一篇文章<a href="https://www.jianshu.com/p/cb49694dd698?spm=a2c4e.11155515.0.0.XB6hgh" target="_blank" rel="noopener">《给职场新人的10点职涯建议》</a>发表后，得到了很多简友，特别是年轻程序员朋友们的喜爱，这令我颇感意外，但又很受鼓舞。同时，我也收到了一些简信，大多来自那些毕业不久，刚步入工作岗位的职场新人。询问的内容也大多是如何选择职业方向，如何成为一名优秀的软件工程师，以及怎样快速提高自身的技能等。我在一一回复的同时，不禁想结合自身的经历，谈谈如何才能成为一名优秀的全栈工程师。 </p>
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://wangpeng2017.github.io/Blog/Blog/2018/04/08/如何成为一名优秀的全栈工程师/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="王鹏">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/Blog/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="just a coder">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">如何成为一名优秀的全栈工程师</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-08T23:30:56+08:00">
+                2018-04-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="写在最前"><a href="#写在最前" class="headerlink" title="写在最前"></a>写在最前</h3><p>我的前一篇文章<a href="https://www.jianshu.com/p/cb49694dd698?spm=a2c4e.11155515.0.0.XB6hgh" target="_blank" rel="noopener">《给职场新人的10点职涯建议》</a>发表后，得到了很多简友，特别是年轻程序员朋友们的喜爱，这令我颇感意外，但又很受鼓舞。同时，我也收到了一些简信，大多来自那些毕业不久，刚步入工作岗位的职场新人。询问的内容也大多是如何选择职业方向，如何成为一名优秀的软件工程师，以及怎样快速提高自身的技能等。我在一一回复的同时，不禁想结合自身的经历，谈谈如何才能成为一名优秀的全栈工程师。 </p>
 <a id="more"></a>
 <h3 id="什么是全栈工程师"><a href="#什么是全栈工程师" class="headerlink" title="什么是全栈工程师"></a>什么是全栈工程师</h3><p>全栈工程师一词，最早出现于Facebook工程师Calos Bueno的一篇文章 - Full Stack （需fanqiang）。他把全栈工程师定义为对性能影响有着深入理解的技术通才。自那以后全栈这个词便流行起来，我看到过的就有全栈工程师，全栈设计师，全栈运维，全栈市场营销人员等等。而在“拉钩”，“100Offer”等针对互联网人才的招聘网站上，全栈工程师更是一跃成为热门招聘职位，其薪资水平也比一般的开发工程师职位要高出一截。那么，什么是全栈工程师，我们又应该如何定义一名全栈工程师呢？ </p>
 <p>百度百科对全栈工程师的定义是这样的：“掌握多种技能，并能利用多种技能独立完成产品的人”。我觉得这个定义还不够全面，我认为全栈工程师应该同时是一位资深开发工程师、架构师以及具有敏捷开发技能的程序员。全栈工程师对于软件开发的认识往往已经进化了，他们把特定的技术抛到了身后，明白技术的更新始终比计算机理论要快的道理，因此，他们注重强化自身的核心技能，关注并乐于实践其他技术。全栈工程师往往是某一方面的专家，同时通晓并善于在正确的场合运用其他语言、工具和技术。 </p>
@@ -147,68 +359,374 @@
 <p>全栈工程师决不是一夜练成的，你需要打好技术基础，强化核心技能，并持续学习。相信有一天你也能像我一样，感受到自由地运用技术，开发出优秀产品所带来的乐趣的。<br>看了受益匪浅啊~~~ </p>
 <p>原文转自:<a href="http://www.jianshu.com/p/f0d134ed7fd0" target="_blank" rel="noopener">http://www.jianshu.com/p/f0d134ed7fd0</a></p>
 
-      </div>
-      <div class="post-copyright">
-    <p class="copyright-item">
-      <span>原文作者: </span>
-      <a href="https://http://blog.aiyunxiao.top">王鹏</a>
-    </p>
-    <p class="copyright-item">
-      <span>原文链接: </span>
-      <a href="https://http://blog.aiyunxiao.top/2018/04/08/如何成为一名优秀的全栈工程师/">https://http://blog.aiyunxiao.top/2018/04/08/如何成为一名优秀的全栈工程师/</a>
-    </p>
-    <p class="copyright-item">
-      <span>许可协议: </span><a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>
-    </p>
-  </div>
-      <footer class="post-footer">
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
         <div class="post-tags">
-            <a href="/tags/全栈-node-前端/">全栈 node 前端</a>
-            </div>
+          
+            <a href="/Blog/tags/全栈-node-前端/" rel="tag"># 全栈 node 前端</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/Blog/2018/03/14/h5 移动端mate标签/" rel="next" title="h5 移动端mate标签">
+                <i class="fa fa-chevron-left"></i> h5 移动端mate标签
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/Blog/2018/04/08/vue组件开发总结/" rel="prev" title="vue组件开发总结">
+                vue组件开发总结 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
         
-        <nav class="post-nav"><a class="prev" href="/2018/04/08/vue组件开发总结/">
-        <i class="iconfont icon-left"></i>
-        <span class="prev-text nav-default">vue组件开发总结</span>
-        <span class="prev-text nav-mobile">上一篇</span>
-      </a>
-    <a class="next" href="/2018/03/14/h5 移动端mate标签/">
-        <span class="next-text nav-default">h5 移动端mate标签</span>
-        <span class="prev-text nav-mobile">下一篇</span>
-        <i class="iconfont icon-right"></i>
-      </a>
-    </nav></footer>
-    </article></div><div class="comments" id="comments"></div></div>
-      </main>
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
 
-      <footer id="footer" class="footer"><div class="social-links"><a href="mailto:your@email.com" class="iconfont icon-email" title="email"></a>
-        <a href="https://github.com/ahonn" class="iconfont icon-github" title="github"></a>
-        <a href="/atom.xml" class="iconfont icon-rss" title="rss"></a>
-    </div><div class="copyright">
-  <span class="power-by">
-    由 <a class="hexo-link" href="https://hexo.io/">Hexo</a> 强力驱动
-  </span>
-  <span class="division">|</span>
-  <span class="theme-info">
-    主题 - 
-    <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
-  </span>
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
 
-  <span class="copyright-year">&copy;2015 - 2019<span class="heart">
-      <i class="iconfont icon-heart"></i>
-    </span>
-    <span class="author">王鹏</span>
-  </span>
-</div>
-</footer>
+      
 
-      <div class="back-to-top" id="back-to-top">
-        <i class="iconfont icon-up"></i>
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Inhaltsverzeichnis
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Übersicht
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">王鹏</p>
+              <p class="site-description motion-element" itemprop="description">javascript css html React Vue React-Native vuex vux ...</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/Blog/archives/">
+              
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">Artikel</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/Blog/tags/index.html">
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">Tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#写在最前"><span class="nav-number">1.</span> <span class="nav-text">写在最前</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是全栈工程师"><span class="nav-number">2.</span> <span class="nav-text">什么是全栈工程师</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#全栈工程师的价值"><span class="nav-number">3.</span> <span class="nav-text">全栈工程师的价值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#全栈工程师的技能栈"><span class="nav-number">4.</span> <span class="nav-text">全栈工程师的技能栈</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#关键开发技能（硬实力）："><span class="nav-number">5.</span> <span class="nav-text">关键开发技能（硬实力）：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#附加技能（软实力）："><span class="nav-number">6.</span> <span class="nav-text">附加技能（软实力）：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#优秀的全栈工程师需要走出去"><span class="nav-number">7.</span> <span class="nav-text">优秀的全栈工程师需要走出去</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
       </div>
-    </div><script type="text/javascript" src="/lib/jquery/jquery.min.js"></script>
-  <script type="text/javascript" src="/lib/slideout/slideout.js"></script>
-  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox.pack.js"></script>
-  <script type="text/javascript" src="/lib/pjax/jquery.pjax.min.js"></script>
-  <script type="text/javascript" src="/lib/nprogress/nprogress.min.js"></script>
-  <script type="text/javascript" src="/js/src/even.js?v=2.11.0"></script>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">王鹏</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Erstellt mit  <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/Blog/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/Blog/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/Blog/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/Blog/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/Blog/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/Blog/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/Blog/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/Blog/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/Blog/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/Blog/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/Blog/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
 </body>
 </html>
